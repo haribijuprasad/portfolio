@@ -7,35 +7,61 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:#020617;color:#e2e8f0}
-header{padding:80px 20px;text-align:center;background:linear-gradient(135deg,#020617,#0f172a)}
-h1{font-size:3rem;font-weight:700}
-p.subtitle{margin-top:10px;color:#94a3b8}
+body{font-family:'Inter',sans-serif;background:#020617;color:#e2e8f0;overflow-x:hidden}
+nav{position:sticky;top:0;background:rgba(2,6,23,0.8);backdrop-filter:blur(10px);padding:15px 30px;display:flex;justify-content:space-between;z-index:10}
+nav a{margin:0 10px;color:#38bdf8;text-decoration:none;font-size:0.9rem}
+header{padding:100px 20px;text-align:center;background:linear-gradient(135deg,#020617,#0f172a)}
+h1{font-size:3rem}
+p.subtitle{color:#94a3b8;margin-top:10px}
 .container{max-width:1100px;margin:auto;padding:40px 20px}
 .section-title{font-size:1.8rem;margin-bottom:20px;border-left:4px solid #38bdf8;padding-left:10px}
-.card{background:rgba(30,41,59,0.6);backdrop-filter:blur(10px);border-radius:16px;padding:20px;margin-bottom:20px;border:1px solid rgba(255,255,255,0.05)}
+.card{background:rgba(30,41,59,0.6);backdrop-filter:blur(10px);border-radius:16px;padding:20px;margin-bottom:20px;border:1px solid rgba(255,255,255,0.05);transition:0.3s}
+.card:hover{transform:translateY(-5px)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
 ul{margin-top:10px;padding-left:20px}
-.skills span{display:inline-block;background:#1e293b;padding:8px 12px;margin:5px;border-radius:8px;font-size:0.9rem}
-a{color:#38bdf8;text-decoration:none}
-.btn{display:inline-block;padding:10px 20px;margin:5px;border-radius:8px;background:#38bdf8;color:#020617;font-weight:600}
+.skills span{display:inline-block;background:#1e293b;padding:8px 12px;margin:5px;border-radius:8px;font-size:0.85rem}
+.btn{display:inline-block;padding:10px 20px;margin-top:15px;border-radius:8px;background:#38bdf8;color:#020617;font-weight:600;text-decoration:none}
+img{max-width:100%;border-radius:10px;margin-top:10px}
+footer{text-align:center;padding:30px;color:#64748b}
 </style>
 </head>
 <body>
 
+<nav>
+<div><strong>Hari Prasad B</strong></div>
+<div>
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
 <header>
-<h1>Hari Prasad B</h1>
-<p class="subtitle">Robotics & Embedded Systems Engineer</p>
-<p class="subtitle">Motion Control | Embedded Systems | Mechatronics</p>
-<a href="#projects" class="btn">View Projects</a>
+<h1>Robotics & Embedded Systems Engineer</h1>
+<p class="subtitle">Building real-time control systems and intelligent mobility solutions</p>
+<a href="#projects" class="btn">Explore Work</a>
 </header>
 
 <div class="container">
 
-<section>
+<section id="about">
 <h2 class="section-title">About</h2>
 <div class="card">
-<p>Robotics Engineer specializing in motion control, actuator systems, and embedded robotics with strong hands-on experience in building dynamic robotic platforms.</p>
+<p>Robotics Engineer specializing in motion control, actuator systems, and embedded robotics. Strong experience in STM32-based real-time systems, sensor fusion, and multi-motor control architectures.</p>
+</div>
+</section>
+
+<section id="experience">
+<h2 class="section-title">Experience</h2>
+<div class="card">
+<h3>Robotics Engineer – R&D | SINA Mobility</h3>
+<ul>
+<li>Developed self-balancing electric vehicle system</li>
+<li>Implemented real-time control using STM32 + FreeRTOS</li>
+<li>Integrated IMU, encoder, and actuator feedback systems</li>
+<li>Worked on system testing and optimization</li>
+</ul>
 </div>
 </section>
 
@@ -45,13 +71,13 @@ a{color:#38bdf8;text-decoration:none}
 
 <div class="card">
 <h3>Self-Balancing Electric Bike</h3>
-<p>Inverted pendulum-based robotic system with real-time stabilization.</p>
-<a href="#case-study">View Detailed Case Study →</a>
+<p>Inverted pendulum system with actuator-based stabilization.</p>
+<a href="#case-study">View Case Study →</a>
 </div>
 
 <div class="card">
 <h3>Wall-Climbing Robot</h3>
-<p>Suction-based robotic system for vertical mobility.</p>
+<p>Suction-based vertical mobility robot.</p>
 </div>
 
 <div class="card">
@@ -60,78 +86,71 @@ a{color:#38bdf8;text-decoration:none}
 </div>
 
 <div class="card">
-<h3>Servo-Based Expressive Motion</h3>
-<p>Animatronics-inspired motion control prototype.</p>
+<h3>Servo Motion Prototype</h3>
+<p>Animatronics-style expressive motion system.</p>
 </div>
 
 </div>
 </section>
 
+<section>
+<h2 class="section-title">Skills</h2>
+<div class="card skills">
+<span>STM32</span><span>FreeRTOS</span><span>C/C++</span><span>IMU</span><span>Encoders</span><span>BLDC</span><span>MATLAB</span><span>Fusion 360</span>
+</div>
+</section>
+
 <section id="case-study">
-<h2 class="section-title">Case Study: Self-Balancing Electric Bike</h2>
+<h2 class="section-title">Case Study: Self-Balancing Bike</h2>
 
 <div class="card">
 <h3>Overview</h3>
-<p>Inverted pendulum-based self-balancing electric vehicle using real-time control.</p>
+<p>Self-balancing electric bike based on inverted pendulum dynamics using real-time actuator control.</p>
 </div>
 
 <div class="card">
 <h3>System Architecture</h3>
 <ul>
 <li>STM32F4 + FreeRTOS</li>
-<li>MPU6050 + Encoder</li>
-<li>Linear actuators + BTS7960</li>
-<li>SD card logging</li>
+<li>MPU6050 (IMU) + Encoder</li>
+<li>Linear actuators with BTS7960</li>
+<li>SD card logging (SPI)</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>Control Strategy</h3>
+<h3>Control Logic</h3>
 <ul>
-<li>Tilt-based actuator control</li>
-<li>Speed-based safety logic</li>
-<li>Closed-loop feedback</li>
+<li>Tilt angle → actuator correction</li>
+<li>Speed threshold → safety override</li>
+<li>Closed-loop feedback system</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>Challenges</h3>
+<h3>Engineering Challenges</h3>
 <ul>
-<li>Actuator delay</li>
-<li>Efficiency issues</li>
-<li>Sensor noise</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Results</h3>
-<ul>
-<li>Stable balancing achieved</li>
-<li>Real-time response working</li>
+<li>Actuator latency</li>
+<li>Energy efficiency</li>
+<li>Sensor noise filtering</li>
 </ul>
 </div>
 
 </section>
 
-<section>
-<h2 class="section-title">Skills</h2>
-<div class="card skills">
-<span>STM32</span>
-<span>FreeRTOS</span>
-<span>Embedded C</span>
-<span>Control Systems</span>
-<span>Sensors</span>
-</div>
-</section>
-
-<section>
+<section id="contact">
 <h2 class="section-title">Contact</h2>
 <div class="card">
 <p>Email: hariprasad5056@gmail.com</p>
+<p>Phone: +91 8848334253</p>
 </div>
 </section>
 
 </div>
+
+<footer>
+<p>© 2026 Hari Prasad B</p>
+</footer>
 
 </body>
 </html>
