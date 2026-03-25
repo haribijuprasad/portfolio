@@ -27,69 +27,108 @@ a{color:#38bdf8;text-decoration:none}
 <h1>Hari Prasad B</h1>
 <p class="subtitle">Robotics & Embedded Systems Engineer</p>
 <p class="subtitle">Motion Control | Embedded Systems | Mechatronics</p>
-<a href="#case-study" class="btn">View Bike Case Study</a>
+<a href="#projects" class="btn">View Projects</a>
 </header>
 
 <div class="container">
+
+<section>
+<h2 class="section-title">About</h2>
+<div class="card">
+<p>Robotics Engineer specializing in motion control, actuator systems, and embedded robotics with strong hands-on experience in building dynamic robotic platforms.</p>
+</div>
+</section>
+
+<section id="projects">
+<h2 class="section-title">Projects</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Self-Balancing Electric Bike</h3>
+<p>Inverted pendulum-based robotic system with real-time stabilization.</p>
+<a href="#case-study">View Detailed Case Study →</a>
+</div>
+
+<div class="card">
+<h3>Wall-Climbing Robot</h3>
+<p>Suction-based robotic system for vertical mobility.</p>
+</div>
+
+<div class="card">
+<h3>Interactive Sensor Systems</h3>
+<p>Contactless automation using ultrasonic sensors.</p>
+</div>
+
+<div class="card">
+<h3>Servo-Based Expressive Motion</h3>
+<p>Animatronics-inspired motion control prototype.</p>
+</div>
+
+</div>
+</section>
 
 <section id="case-study">
 <h2 class="section-title">Case Study: Self-Balancing Electric Bike</h2>
 
 <div class="card">
 <h3>Overview</h3>
-<p>This project is an inverted pendulum-based self-balancing electric vehicle designed for urban mobility. The system uses real-time sensor feedback and actuator control to maintain balance dynamically.</p>
+<p>Inverted pendulum-based self-balancing electric vehicle using real-time control.</p>
 </div>
 
 <div class="card">
 <h3>System Architecture</h3>
 <ul>
-<li>Controller: STM32F4 with FreeRTOS</li>
-<li>Sensors: MPU6050 (IMU), Rotary Encoder (600 PPR)</li>
-<li>Actuators: Linear actuators with BTS7960 drivers</li>
-<li>Feedback: Tilt angle + speed-based control</li>
-<li>Data Logging: SD card (SPI interface)</li>
+<li>STM32F4 + FreeRTOS</li>
+<li>MPU6050 + Encoder</li>
+<li>Linear actuators + BTS7960</li>
+<li>SD card logging</li>
 </ul>
 </div>
 
 <div class="card">
 <h3>Control Strategy</h3>
 <ul>
-<li>Tilt angle determines actuator movement</li>
-<li>Speed threshold ensures safety (actuators retract above limit)</li>
-<li>Closed-loop feedback using IMU + encoder</li>
-<li>Real-time task scheduling using FreeRTOS</li>
+<li>Tilt-based actuator control</li>
+<li>Speed-based safety logic</li>
+<li>Closed-loop feedback</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>Key Engineering Challenges</h3>
+<h3>Challenges</h3>
 <ul>
-<li>Actuator response delay affecting stability</li>
-<li>Efficient power usage in continuous balancing</li>
-<li>Sensor noise and filtering</li>
-<li>Mechanical limitations of actuator system</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Solutions & Improvements</h3>
-<ul>
-<li>Optimized control logic for smoother actuation</li>
-<li>Implemented threshold-based safety logic</li>
-<li>Improved sensor fusion for stability</li>
-<li>Continuous testing and tuning on real terrain</li>
+<li>Actuator delay</li>
+<li>Efficiency issues</li>
+<li>Sensor noise</li>
 </ul>
 </div>
 
 <div class="card">
 <h3>Results</h3>
 <ul>
-<li>Achieved stable balancing under controlled conditions</li>
-<li>Real-time response using embedded system</li>
-<li>Successful integration of sensors, actuators, and control logic</li>
+<li>Stable balancing achieved</li>
+<li>Real-time response working</li>
 </ul>
 </div>
 
+</section>
+
+<section>
+<h2 class="section-title">Skills</h2>
+<div class="card skills">
+<span>STM32</span>
+<span>FreeRTOS</span>
+<span>Embedded C</span>
+<span>Control Systems</span>
+<span>Sensors</span>
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Contact</h2>
+<div class="card">
+<p>Email: hariprasad5056@gmail.com</p>
+</div>
 </section>
 
 </div>
